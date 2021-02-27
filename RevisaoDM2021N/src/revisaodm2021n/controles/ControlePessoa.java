@@ -5,7 +5,6 @@
  */
 package revisaodm2021n.controles;
 
-import java.util.ArrayList;
 import java.util.List;
 import revisaodm2021n.dados.Pessoa;
 import revisaodm2021n.modelos.DaoPessoa;
@@ -35,8 +34,7 @@ public class ControlePessoa {
     }
     
     public List<Pessoa> listar (Pessoa p) {
-        List<Pessoa> pes = daoPes.listar(p);
-        return pes;
+        return daoPes.listar(p);
     }
     
 }
