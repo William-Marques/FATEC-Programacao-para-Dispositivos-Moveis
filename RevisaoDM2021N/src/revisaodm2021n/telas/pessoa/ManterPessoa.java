@@ -5,6 +5,7 @@
  */
 package revisaodm2021n.telas.pessoa;
 
+import java.sql.SQLException;
 import java.util.List;
 import javax.swing.JOptionPane;
 import revisaodm2021n.controles.ControlePessoa;
@@ -23,20 +24,21 @@ public class ManterPessoa {
     static String peso;
     static String altura;
     
-    static ControlePessoa contPes = new ControlePessoa();
+    static ControlePessoa contPes;
     
-    public static void Inserir() {
+    public static void Inserir() throws SQLException, ClassNotFoundException {
         nome = JOptionPane.showInputDialog("NOME");
         idade = JOptionPane.showInputDialog("IDADE"); 
         genero = JOptionPane.showInputDialog("GENERO");
         peso = JOptionPane.showInputDialog("PESO");
         altura = JOptionPane.showInputDialog("ALTURA");
         Pessoa pEntrada = new Pessoa(nome,idade,genero,peso,altura);
+        contPes = new ControlePessoa();
         Pessoa pSaida = contPes.inserir(pEntrada);
         JOptionPane.showMessageDialog(null,pSaida.toString());
     }
     
-    public static void Alterar() {
+    public static void Alterar() throws SQLException, ClassNotFoundException {
         id = Integer.parseInt(JOptionPane.showInputDialog("ID"));
         nome = JOptionPane.showInputDialog("NOME");
         idade = JOptionPane.showInputDialog("IDADE"); 
@@ -44,29 +46,34 @@ public class ManterPessoa {
         peso = JOptionPane.showInputDialog("PESO");
         altura = JOptionPane.showInputDialog("ALTURA");
         Pessoa pEntrada = new Pessoa(id,nome,idade,genero,peso,altura);
+        contPes = new ControlePessoa();
         Pessoa pSaida = contPes.alterar(pEntrada);
         JOptionPane.showMessageDialog(null,pSaida.toString());
     }
 
-    public static void Listar() {
+    public static void Listar() throws SQLException, ClassNotFoundException {
         nome = JOptionPane.showInputDialog("NOME");
         Pessoa pEntrada = new Pessoa(nome);
+        contPes = new ControlePessoa();
         List<Pessoa> psSaida = contPes.listar(pEntrada);
-        JOptionPane.showMessageDialog(null,psSaida.get(1).toString());
-        
+        psSaida.forEach((pesL) -> {
+            JOptionPane.showMessageDialog(null,pesL.toString());
+        });
     }
 
-    public static void Buscar() {
+    public static void Buscar() throws SQLException, ClassNotFoundException {
         id = Integer.parseInt(JOptionPane.showInputDialog("ID"));
         Pessoa pEntrada = new Pessoa(id);
+        contPes = new ControlePessoa();
         Pessoa pSaida = contPes.buscar(pEntrada);
         JOptionPane.showMessageDialog(null,pSaida.toString());
         
     }
 
-    public static void Excluir() {
+    public static void Excluir() throws SQLException, ClassNotFoundException {
         id = Integer.parseInt(JOptionPane.showInputDialog("ID"));
         Pessoa pEntrada = new Pessoa(id);
+        contPes = new ControlePessoa();
         Pessoa pSaida = contPes.excluir(pEntrada);
         JOptionPane.showMessageDialog(null,pSaida.toString());
     }

@@ -33,6 +33,7 @@ public class DaoDepartamento {
 
     public List<Departamento> listar (Departamento d) {
         List<Departamento> ldep = new ArrayList<>();
+        ldep.add(d);
         return ldep;
     }
 

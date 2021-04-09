@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package revisaodm2021n.telas.pessoa;
+package revisaodm2021n.telas.departamento;
 
 import java.util.List;
 import javax.swing.JOptionPane;

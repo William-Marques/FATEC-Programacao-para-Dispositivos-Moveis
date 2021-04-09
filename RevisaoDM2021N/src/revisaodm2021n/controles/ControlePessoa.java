@@ -5,6 +5,7 @@
  */
 package revisaodm2021n.controles;
 
+import java.sql.SQLException;
 import java.util.List;
 import revisaodm2021n.dados.Pessoa;
 import revisaodm2021n.modelos.DaoPessoa;
@@ -14,27 +15,31 @@ import revisaodm2021n.modelos.DaoPessoa;
  * @author User
  */
 public class ControlePessoa {
+
+    static DaoPessoa daoP;
     
-    static DaoPessoa daoPes = new DaoPessoa();
-   
-    public Pessoa inserir (Pessoa p) {
-        return daoPes.inserir(p);
+    public ControlePessoa() throws SQLException, ClassNotFoundException {
+        daoP = new DaoPessoa();
     }
-  
-    public Pessoa alterar (Pessoa p) {
-        return daoPes.alterar(p);
+
+    public Pessoa inserir(Pessoa pEntrada) throws SQLException {
+        return daoP.inserir(pEntrada);
     }
- 
-    public Pessoa excluir (Pessoa p) {
-        return daoPes.excluir(p);
+
+    public List<Pessoa> listar(Pessoa pEntrada) throws SQLException {
+        return daoP.listar(pEntrada);
     }
- 
-    public Pessoa buscar (Pessoa p) {
-        return daoPes.buscar(p);
+
+    public Pessoa alterar(Pessoa pEntrada) throws SQLException {
+        return daoP.alterar(pEntrada);
     }
-    
-    public List<Pessoa> listar (Pessoa p) {
-        return daoPes.listar(p);
+
+    public Pessoa buscar(Pessoa pEntrada) throws SQLException {
+        return daoP.buscar(pEntrada);
+    }
+
+    public Pessoa excluir(Pessoa pEntrada) throws SQLException {
+        return daoP.excluir(pEntrada);
     }
     
 }
