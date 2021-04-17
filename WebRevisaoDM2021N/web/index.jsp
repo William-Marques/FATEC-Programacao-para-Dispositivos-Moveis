@@ -5,4 +5,4 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% response.sendRedirect("./acesso/login.jsp"); %>
+<% response.sendRedirect("./jsp/acesso/login.jsp"); %>
