@@ -22,7 +22,7 @@ public class ConexaoDb {
             // Configurando a nossa conexão com um banco de dados//
             String serverName = "localhost";    //caminho do servidor do BD
             String mydatabase ="dm2021n";        //nome do seu banco de dados
-            String url = "jdbc:mysql://" + serverName + "/" + mydatabase + "?useTimezone=true&serverTimezone=UTC";
+            String url = "jdbc:mysql://" + serverName + "/" + mydatabase + "?useTimezone=true&serverTimezone=UTC&useSSL=false";
             String username = "root";        //nome de um usuário de seu BD
             String password = "321Mudar";      //sua senha de acesso
             Connection c = DriverManager.getConnection(url, username, password);
