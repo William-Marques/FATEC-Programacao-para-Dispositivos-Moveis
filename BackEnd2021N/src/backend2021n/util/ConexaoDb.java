@@ -53,7 +53,7 @@ Class.forName(driverName);
 
         String serverName = "localhost";    //caminho do servidor do BD
 
-        String mydatabase ="world";        //nome do seu banco de dados
+        String mydatabase ="dm2021n";        //nome do seu banco de dados
 
         // String url = "jdbc:mysql://" + serverName + "/" + mydatabase;
 

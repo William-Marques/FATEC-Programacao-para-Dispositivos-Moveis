@@ -24,7 +24,7 @@ public class ConexaoDb {
             String mydatabase ="dm2021n";        //nome do seu banco de dados
             String url = "jdbc:mysql://" + serverName + "/" + mydatabase + "?useTimezone=true&serverTimezone=UTC";
             String username = "root";        //nome de um usuário de seu BD
-            String password = "admin";      //sua senha de acesso
+            String password = "321Mudar";      //sua senha de acesso
             Connection c = DriverManager.getConnection(url, username, password);
             if (c != null) System.out.println("STATUS--->Conectado com sucesso!");
             return c;
