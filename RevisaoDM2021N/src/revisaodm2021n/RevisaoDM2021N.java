@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package revisaodm2021n;
 
 import java.sql.SQLException;
@@ -11,23 +6,15 @@ import revisaodm2021n.telas.pessoa.ManterPessoa;
 import revisaodm2021n.telas.usuario.ManterUsuario;
 import revisaodm2021n.telas.departamento.ManterDepartamento;
 import revisaodm2021n.telas.pessoa.ManterPessoaFisica;
+import revisaodm2021n.telas.terceiros.ManterTerceiros;
 
-/**
- *
- * @author User
- */
 public class RevisaoDM2021N {
 
-    /**
-     * @param args the command line arguments
-     * @throws java.sql.SQLException
-     * @throws java.lang.ClassNotFoundException
-     */
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
         
         JOptionPane.showMessageDialog(null,"SISTEMA DE CADASTRO PESSOAS , DEPARTAMENTO E USUARIO");
-        JOptionPane.showMessageDialog(null,"ENTRE COM: 1 - PESSOAS, 2 - DEPARTAMENTO, 3 - USUARIO");
+        JOptionPane.showMessageDialog(null,"ENTRE COM: 1 - PESSOAS, 2 - DEPARTAMENTO, 3 - USUARIO, 4 - TERCEIROS");
         int sistema = Integer.parseInt(JOptionPane.showInputDialog("ENTRE COM A OPÇÃO"));
 
         if(sistema == 1 ) {
@@ -113,7 +100,23 @@ public class RevisaoDM2021N {
             if(opcao == 6) { ManterUsuario.Validar(); }
 
         }
+        
+        if(sistema == 4 ) {
 
-    }
-    
+            JOptionPane.showMessageDialog(null,"SISTEMA DE CADASTRO TERCEIROS");
+            JOptionPane.showMessageDialog(null,"ENTRE COM: 1 - INSERIR, 2 - ALTERAR, 3 - BUSCAR, 4 - LISTA, 5 - EXCLUIR");
+
+            int opcao = Integer.parseInt(JOptionPane.showInputDialog("ENTRE COM A OPÇÃO"));
+        
+            if(opcao == 1) { ManterTerceiros.Inserir(); }
+
+            if(opcao == 2) { ManterTerceiros.Alterar(); }
+
+            if(opcao == 3) { ManterTerceiros.Buscar(); }
+
+            if(opcao == 4) { ManterTerceiros.Listar(); }
+
+            if(opcao == 5) { ManterTerceiros.Excluir(); }
+        }
+    }    
 }

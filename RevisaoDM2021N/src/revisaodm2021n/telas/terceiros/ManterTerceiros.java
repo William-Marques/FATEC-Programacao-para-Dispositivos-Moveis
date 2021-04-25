@@ -3,7 +3,7 @@ package revisaodm2021n.telas.terceiros;
 import java.sql.SQLException;
 import java.util.List;
 import javax.swing.JOptionPane;
-//import revisaodm2021n.controles.ControleTerceiros;
+import revisaodm2021n.controles.ControleTerceiros;
 import revisaodm2021n.dados.Terceiros;
 
 public class ManterTerceiros {
@@ -20,7 +20,7 @@ public class ManterTerceiros {
     static String empresa;
     static String tipo;
     
-    //static ControleUsuario contUsu;
+    static ControleTerceiros controleTerceiros;
     
     public static void Inserir() throws SQLException, ClassNotFoundException {
         nome = JOptionPane.showInputDialog("NOME");
@@ -63,35 +63,30 @@ public class ManterTerceiros {
         JOptionPane.showMessageDialog(null,terceirosSaida.toString());
     }
     
-    //PAREI AQUI NESSA BOSTA>>>>>>>>>>
-
-    public static void Listar() throws SQLException, ClassNotFoundException {
-        login = JOptionPane.showInputDialog("LOGIN");
-        Usuario uEntrada = new Usuario(login);
-        contUsu = new ControleUsuario();
-        List<Usuario> usSaida = contUsu.listar(uEntrada);
-        usSaida.forEach((usuL) -> {
-            JOptionPane.showMessageDialog(null,usuL.toString());
+    //objeto professor tinha usSaida ao invés de uSaida, talvez de problema
+     public static void Listar() throws SQLException, ClassNotFoundException {
+        nome = JOptionPane.showInputDialog("NOME");
+        Terceiros terceirosEntrada = new Terceiros(nome);
+        controleTerceiros = new ControleTerceiros();
+        List<Terceiros> listaTerceirosSaida = controleTerceiros.listar(terceirosEntrada);
+        listaTerceirosSaida.forEach((terceiros) -> {
+            JOptionPane.showMessageDialog(null,terceiros.toString());
         });
     }
 
     public static void Buscar() throws SQLException, ClassNotFoundException {
         id = Integer.parseInt(JOptionPane.showInputDialog("ID"));
-        Usuario uEntrada = new Usuario(id);
-        contUsu = new ControleUsuario();
-        Usuario uSaida = contUsu.buscar(uEntrada);
-        JOptionPane.showMessageDialog(null,uSaida.toString());
+        Terceiros terceirosEntrada = new Terceiros(id);
+        controleTerceiros = new ControleTerceiros();
+        Terceiros terceirosSaida = controleTerceiros.buscar(terceirosEntrada);
+        JOptionPane.showMessageDialog(null,terceirosSaida.toString());
     }
 
     public static void Excluir() throws SQLException, ClassNotFoundException {
         id = Integer.parseInt(JOptionPane.showInputDialog("ID"));
-        Usuario uEntrada = new Usuario(id);
-        contUsu = new ControleUsuario();
-        Usuario uSaida = contUsu.excluir(uEntrada);
-        JOptionPane.showMessageDialog(null,uSaida.toString());
+        Terceiros terceirosEntrada = new Terceiros(id);
+        controleTerceiros = new ControleTerceiros();
+        Terceiros terceirosSaida = controleTerceiros.excluir(terceirosEntrada);
+        JOptionPane.showMessageDialog(null,terceirosSaida.toString());
     }
-
-}
-
-    
 }
