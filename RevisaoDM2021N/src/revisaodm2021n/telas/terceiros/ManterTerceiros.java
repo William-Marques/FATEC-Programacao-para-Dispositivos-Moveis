@@ -58,7 +58,7 @@ public class ManterTerceiros {
         
         controleTerceiros = new ControleTerceiros();
         
-        Terceiros terceirosSaida = controleTerceiros.inserir(terceirosEntrada);
+        Terceiros terceirosSaida = controleTerceiros.alterar(terceirosEntrada);
         
         JOptionPane.showMessageDialog(null,terceirosSaida.toString());
     }

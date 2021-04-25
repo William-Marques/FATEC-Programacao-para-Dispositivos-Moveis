@@ -8,6 +8,7 @@
 <%@page import="revisaodm2021n.dados.Usuario"%>
 <%@page import="revisaodm2021n.controles.ControleUsuario"%>
 
+
 <%
     String login = request.getParameter("LOGIN");
     String senha = request.getParameter("SENHA");
@@ -24,7 +25,11 @@
         <h1>MENU</h1>
         <% if(uSaida != null) { %>
             Usuario = <%=uSaida.getId()%> | <%=uSaida.getLogin()%> | <%=uSaida.getSenha()%> | <%=uSaida.getStatus()%> | <%=uSaida.getTipo()%> <br>   
-            Usuario = <a href="../usuario/buscaUsuario.jsp">Buscar</a> = <a href="../usuario/listaUsuario.jsp">Lista</a> = <a href="../usuario/inseriUsuario.jsp">Inseri</a>
+            Usuario = <a href="../usuario/buscaUsuario.jsp">Buscar</a> = <a href="../usuario/listaUsuario.jsp">Listar</a> = <a href="../usuario/inseriUsuario.jsp">Inserir</a>
+            </br>
+            </br>
+            </br>
+            Terceiros = <a href="../terceiros/buscaTerceiros.jsp">Buscar</a> = <a href="../terceiros/listaTerceiros.jsp">Listar</a> = <a href="../terceiros/inseriTerceiros.jsp">Inserir</a>
         <% } else { %>
             Usuário Inválido
         <% } %>
