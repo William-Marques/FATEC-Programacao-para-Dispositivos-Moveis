@@ -13,3 +13,5 @@ CREATE TABLE dm2021n.ter_terceiros (
     ter_tipo VARCHAR(30) NOT NULL,    
     PRIMARY KEY (ter_id)
 );
+
+select * from ter_terceiros;
