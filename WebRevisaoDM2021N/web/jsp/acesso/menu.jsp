@@ -1,9 +1,3 @@
-<%-- 
-    Document   : menu
-    Created on : 09/04/2021, 20:09:32
-    Author     : User
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="revisaodm2021n.dados.Usuario"%>
 <%@page import="revisaodm2021n.controles.ControleUsuario"%>
@@ -30,6 +24,12 @@
             </br>
             </br>
             Terceiros = <a href="../terceiros/buscaTerceiros.jsp">Buscar</a> = <a href="../terceiros/listaTerceiros.jsp">Listar</a> = <a href="../terceiros/inseriTerceiros.jsp">Inserir</a>
+            </br>
+            </br>
+            Empresa = <a href="../empresa/buscaEmpresa.jsp">Buscar</a> = <a href="../empresa/listaEmpresa.jsp">Listar</a> = <a href="../empresa/inseriEmpresa.jsp">Inserir</a>
+            </br>
+            </br>
+            Alocação = <a href="../alocacao/buscaAlocacao.jsp">Buscar</a> = <a href="../alocacao/listaAlocacao.jsp">Listar</a> = <a href="../alocacao/inseriAlocacao.jsp">Inserir</a>            
         <% } else { %>
             Usuário Inválido
         <% } %>

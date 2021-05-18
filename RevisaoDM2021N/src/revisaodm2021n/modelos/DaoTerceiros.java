@@ -152,4 +152,29 @@ public class DaoTerceiros {
         }
         return listaTerceiros;
     }
+    public List<Terceiros> listarNome (Terceiros terceiros) throws SQLException {
+         // usus: array armazena a lista de registros
+        List<Terceiros> listaNomeDeTerceiros = new ArrayList<>();
+       
+        String sql = "select ter_id, ter_nome from ter_terceiros where ter_nome like ?";
+        // seta os valores
+        try (PreparedStatement stmt = this.conexao.prepareStatement(sql)) {
+            // seta os valores
+            stmt.setString(1,"%" + terceiros.getNome()+ "%");
+            
+            ResultSet rs = stmt.executeQuery();
+            
+            while (rs.next()) {
+                // criando o objeto Usuario
+                Terceiros terceirosSaida = new Terceiros(
+                        rs.getInt(1),
+                        rs.getString(2));
+                // adiciona o usu à lista de usus
+                listaNomeDeTerceiros.add(terceirosSaida);
+            }
+            
+            rs.close();
+        }
+        return listaNomeDeTerceiros;
+    }
 }

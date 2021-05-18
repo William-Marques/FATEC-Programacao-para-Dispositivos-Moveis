@@ -19,6 +19,12 @@ public class Terceiros {
         this.id = id;
     }
 
+    public Terceiros(int id, String nome) {
+        this.id = id;
+        this.nome = nome;
+    }
+    
+
     public Terceiros(String nome, String dataNascimento, String cpf, String genero, String endereco, String telefone, String email, String empresa, String tipo) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
@@ -133,6 +139,6 @@ public class Terceiros {
     @Override
     public String toString() {
         return "Terceiros{" + "id=" + id + ", nome=" + nome + ", dataNascimento=" + dataNascimento + ", cpf=" + cpf + ", genero=" + genero + ", endereco=" + endereco + ", telefone=" + telefone + ", email=" + email + ", empresa=" + empresa + ", tipo=" + tipo + '}';
-    }
+    }    
     
 }
