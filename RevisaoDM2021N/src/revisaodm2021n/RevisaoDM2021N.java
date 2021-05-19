@@ -118,9 +118,8 @@ public class RevisaoDM2021N {
 
             if(opcao == 4) { ManterTerceiros.Listar(); }
 
-            if(opcao == 5) { ManterTerceiros.Excluir(); }
+            if(opcao == 5) { ManterTerceiros.Excluir(); }   
             
-            if(opcao == 6) { ManterTerceiros.ListarNome(); }
         }
         
         if(sistema == 5 ) {

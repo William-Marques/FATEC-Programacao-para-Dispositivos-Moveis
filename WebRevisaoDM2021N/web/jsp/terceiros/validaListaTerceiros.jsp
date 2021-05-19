@@ -45,7 +45,7 @@
                     <TD><%=ter.getEmail()%></TD>
                     <TD><%=ter.getEmpresa()%></TD>
                     <TD><%=ter.getTipo()%></TD>
-                    <TD><a href="../terceiros/alteraTerceiros.jsp?ID=<%=ter.getId()%>">Altera</a></TD>
+                    <TD><a href="../terceiros/alteraTerceiros.jsp?ID=<%=ter.getId()%>">Alterar</a></TD>
                     <TD><a href="../terceiros/validaExcluiTerceiros.jsp?ID=<%=ter.getId()%>">Excluir</a></TD>
                 </TR>
                 <% } %>

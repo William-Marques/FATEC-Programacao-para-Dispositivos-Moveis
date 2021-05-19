@@ -5,8 +5,8 @@
 <%
     request.setCharacterEncoding("UTF-8");
     int id = Integer.parseInt(request.getParameter("ID"));
-    String terceiros_id = request.getParameter("NOMEDOTERCEIRO");    
-    String empresa_id = request.getParameter("NOMEDAEMPRESA");    
+    String terceiros_id = request.getParameter("IDDOTERCEIRO");    
+    String empresa_id = request.getParameter("IDDAEMPRESA");    
     String dataentrada = request.getParameter("DATADAENTRADA");
     String datasaida = request.getParameter("DATADASAIDA");      
 

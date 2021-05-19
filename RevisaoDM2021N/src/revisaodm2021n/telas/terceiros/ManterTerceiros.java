@@ -88,15 +88,6 @@ public class ManterTerceiros {
         controleTerceiros = new ControleTerceiros();
         Terceiros terceirosSaida = controleTerceiros.excluir(terceirosEntrada);
         JOptionPane.showMessageDialog(null,terceirosSaida.toString());
-    }
+    }   
     
-    public static void ListarNome() throws SQLException, ClassNotFoundException {
-        nome = JOptionPane.showInputDialog("NOME");
-        Terceiros terceirosEntrada = new Terceiros(nome);
-        controleTerceiros = new ControleTerceiros();
-        List<Terceiros> listaTerceirosSaida = controleTerceiros.listar(terceirosEntrada);
-        listaTerceirosSaida.forEach((terceiros) -> {
-            JOptionPane.showMessageDialog(null, terceiros.getId()+ " " + terceiros.getNome() );
-        });
-    }
 }

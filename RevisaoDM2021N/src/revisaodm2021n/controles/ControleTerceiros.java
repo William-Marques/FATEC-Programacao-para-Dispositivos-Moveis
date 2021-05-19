@@ -21,10 +21,6 @@ public class ControleTerceiros {
         return daoTerceiros.listar(terceirosEntrada);
     }
     
-    public List<Terceiros> listarNome(Terceiros terceirosEntrada) throws SQLException {
-        return daoTerceiros.listarNome(terceirosEntrada);
-    }
-
     public Terceiros alterar(Terceiros terceirosEntrada) throws SQLException {
         return daoTerceiros.alterar(terceirosEntrada);
     }

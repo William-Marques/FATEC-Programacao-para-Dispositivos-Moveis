@@ -1,6 +1,26 @@
 <%@page import="revisaodm2021n.controles.ControleAlocacao"%>
 <%@page import="revisaodm2021n.dados.Alocacao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.List" %>
+<%@page import="revisaodm2021n.dados.Terceiros" %>
+<%@page import="revisaodm2021n.controles.ControleTerceiros" %>
+<%@page import="revisaodm2021n.dados.Empresa" %>
+<%@page import="revisaodm2021n.controles.ControleEmpresa" %>
+
+<%
+    request.setCharacterEncoding("UTF-8");
+    String nome = "";
+    Terceiros terceirosEntrada = new Terceiros(nome);
+    ControleTerceiros controleTerceiros = new ControleTerceiros();
+    List<Terceiros> listaTerceirosSaida = controleTerceiros.listar(terceirosEntrada);
+%>
+
+<%
+    Empresa empresaEntrada = new Empresa(nome);
+    ControleEmpresa controleEmpresa = new ControleEmpresa();
+    List<Empresa> listaEmpresaSaida = controleEmpresa.listar(empresaEntrada);
+%>
+
 <%
     int id = Integer.parseInt(request.getParameter("ID"));
     Alocacao alocacaoEntrada = new Alocacao(id);
@@ -17,10 +37,22 @@
         <h1>ALTERA</h1>
         <form name="validaAlteraAlocacao" action="validaAlteraAlocacao.jsp" method="post">
             ID <%=alocacaoSaida.getId()%> <br>
-            ID DO TERCEIRO <input type="text" name="NOMEDOTERCEIRO" value="<%=alocacaoSaida.getTerceiros_id()%>"> <br>            
-            ID DA EMPRESA <input type="text" name="NOMEDAEMPRESA" value="<%=alocacaoSaida.getEmpresa_id()%>"> <br>            
-            DATA DE ENTRADA <input type="text" name="DATADAENTRADA" value="<%=alocacaoSaida.getDataentrada()%>"> <br>
-            DATA DE SAIDA <input type="text" name="DATADASAIDA" value="<%=alocacaoSaida.getDatasaida()%>"> <br>            
+            NOME DO TERCEIRO <select name="IDDOTERCEIRO" class="browser-default" style="width: 300px">
+                    <% if (!(listaTerceirosSaida.isEmpty())) { %>
+                    <% for (Terceiros ter : listaTerceirosSaida) {%>
+                    <option value="<%=ter.getId()%>" ><%=ter.getNome()%></option>
+                    <% } %>
+                    <% } else { %><% }%>
+                </select><br>
+                NOME DA EMPRESA <select name="IDDAEMPRESA" class="browser-default" style="width: 300px">
+                    <% if (!(listaEmpresaSaida.isEmpty())) { %>
+                    <% for (Empresa emp : listaEmpresaSaida) {%>
+                    <option value="<%=emp.getId()%>"><%=emp.getNome()%></option>
+                    <% } %>
+                    <% } else { %><% }%>
+                </select>                       
+                DATA DE ENTRADA <input type="text" name="DATADAENTRADA" value="<%=alocacaoSaida.getDataentrada()%>" style="width: 300px"> <br>
+                DATA DE SAIDA <input type="text" name="DATADASAIDA" value="<%=alocacaoSaida.getDatasaida()%>" style="width: 300px"> <br>           
 
             <input type="hidden" name="ID" value="<%=alocacaoSaida.getId()%>"> <br>
             <input type="submit" name="ALTERAR" value="ALTERAR"> <br>
