@@ -14,7 +14,7 @@
 <!DOCTYPE html>
 <html>
     <%@include file="../../inc/formatacao.inc" %>
-    <title>JSP Page</title>
+    <title>CRUD Bittencourt - Listar Empresa</title>
     <body>
     <div class="container"/>
         <h1>LISTA</h1> <br>

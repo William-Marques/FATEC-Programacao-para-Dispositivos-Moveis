@@ -19,7 +19,7 @@
 <!DOCTYPE html>
 <html>
     <%@include file="../../inc/formatacao.inc" %>
-    <title>JSP Page</title>
+    <title>CRUD Bittencourt - Alterar Empresa</title>
     <body>
     <div class="container"/>
         <h1>ALTERAÇÃO CONCLUIDA</h1>

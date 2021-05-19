@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <%@include file="../../inc/formatacao.inc" %>
-    <title>JSP Page</title>
+    <title>Inserir Terceiros</title>
     <body>
     <div class="container"/>
         <h1>INSERI</h1>

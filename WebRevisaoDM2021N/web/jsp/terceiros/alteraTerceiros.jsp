@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
     <%@include file="../../inc/formatacao.inc" %>
-    <title>JSP Page</title>
+    <title>CRUD Bittencourt - Alterar Terceiros</title>
     <body>
     <div class="container"/>
         <h1>ALTERA</h1>

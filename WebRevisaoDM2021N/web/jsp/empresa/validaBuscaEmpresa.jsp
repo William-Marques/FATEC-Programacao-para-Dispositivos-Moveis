@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
     <%@include file="../../inc/formatacao.inc" %>
-    <title>JSP Page</title>
+    <title>CRUD Bittencourt - Buscar Empresa</title>
     <body>
     <div class="container"/>
     <h1>VALIDA BUSCA</h1>
