@@ -4,7 +4,7 @@
 
 
 <%
-    String login = "admin";
+    String login = "will";
     String senha = "";
     Usuario uEntrada = new Usuario(login,senha);
     ControleUsuario contUsu = new ControleUsuario();
