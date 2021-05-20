@@ -51,6 +51,7 @@
                 </TR>
            <% } %>
             </table>
+            <a href="../../jsp/acesso/menu2.jsp"><button>Menu Principal</button></a>
     </div>
     </body>
 </html>

@@ -34,22 +34,24 @@
     <title>CRUD Bittencourt - Alterar Alocação</title>
     <body>
         <div class="container"/>
-        <h1>ALTERA</h1>
+        <h1>ALTERAR</h1>
         <form name="validaAlteraAlocacao" action="validaAlteraAlocacao.jsp" method="post">
-            ID <%=alocacaoSaida.getId()%> <br>
+            ID A SER ALTERADA -> <%=alocacaoSaida.getId()%> <br>
             NOME DO TERCEIRO <select name="IDDOTERCEIRO" class="browser-default" style="width: 300px">
                     <% if (!(listaTerceirosSaida.isEmpty())) { %>
-                    <% for (Terceiros ter : listaTerceirosSaida) {%>
+                    <% for (Terceiros ter : listaTerceirosSaida) {%>                    
                     <option value="<%=ter.getId()%>" ><%=ter.getNome()%></option>
                     <% } %>
                     <% } else { %><% }%>
+                    <option selected value="<%=alocacaoSaida.getTerceiros_id()%>"><%=alocacaoSaida.getTerceiros_id()%></option>
                 </select><br>
                 NOME DA EMPRESA <select name="IDDAEMPRESA" class="browser-default" style="width: 300px">
                     <% if (!(listaEmpresaSaida.isEmpty())) { %>
-                    <% for (Empresa emp : listaEmpresaSaida) {%>
-                    <option value="<%=emp.getId()%>"><%=emp.getNome()%></option>
+                    <% for (Empresa emp : listaEmpresaSaida) {%>                    
+                    <option value="<%=emp.getId()%>"><%=emp.getNome()%></option>                    
                     <% } %>
                     <% } else { %><% }%>
+                    <option selected value="<%=alocacaoSaida.getEmpresa_id()%>"><%=alocacaoSaida.getEmpresa_id()%></option>
                 </select>                       
                 DATA DE ENTRADA <input type="text" name="DATADAENTRADA" value="<%=alocacaoSaida.getDataentrada()%>" style="width: 300px"> <br>
                 DATA DE SAIDA <input type="text" name="DATADASAIDA" value="<%=alocacaoSaida.getDatasaida()%>" style="width: 300px"> <br>           

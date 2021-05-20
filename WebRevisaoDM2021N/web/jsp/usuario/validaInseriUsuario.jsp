@@ -31,6 +31,7 @@
         SENHA = <%=uSaida.getSenha()%> <br>
         STATUS = <%=uSaida.getStatus()%> <br>
         TIPO = <%=uSaida.getTipo()%> <br>
+        <a href="../../jsp/acesso/menu2.jsp"><button>Menu Principal</button></a>
     </div>
     </body>
 </html>

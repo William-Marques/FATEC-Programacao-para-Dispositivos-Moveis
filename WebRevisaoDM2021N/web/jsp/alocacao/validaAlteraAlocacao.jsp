@@ -26,7 +26,8 @@
         ID DO TERCEIRO = <%=alocacaoSaida.getTerceiros_id()%> <br>        
         ID DA EMPRESA = <%=alocacaoSaida.getEmpresa_id()%> <br>        
         DATA DA ENTRADA = <%=alocacaoSaida.getDataentrada()%> <br>
-        DATA DA SAIDA = <%=alocacaoSaida.getDatasaida()%> <br>            
-    </div>
+        DATA DA SAIDA = <%=alocacaoSaida.getDatasaida()%> <br>
+        <a href="../../jsp/acesso/menu2.jsp"><button>Menu Principal</button></a>
+    </div>    
     </body>
 </html>

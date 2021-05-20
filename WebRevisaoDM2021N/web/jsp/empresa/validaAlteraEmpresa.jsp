@@ -28,7 +28,8 @@
         CNPJ = <%=empresaSaida.getCnpj()%> <br>        
         ENDERECO = <%=empresaSaida.getEndereco()%> <br>
         TELEFONE = <%=empresaSaida.getTelefone()%> <br>
-        EMAIL = <%=empresaSaida.getEmail()%> <br>        
+        EMAIL = <%=empresaSaida.getEmail()%> <br>
+        <a href="../../jsp/acesso/menu2.jsp"><button>Menu Principal</button></a>
     </div>
     </body>
 </html>
